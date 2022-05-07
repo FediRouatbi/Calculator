@@ -1,0 +1,16 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  color: #ced4da;
+}
+.num {
+  font-size: 10rem;
+  font-weight: 200;
+}
+.notfound {
+  color: rgba(206, 212, 218, 0.429);
+  font-size: 2.5rem;
+}

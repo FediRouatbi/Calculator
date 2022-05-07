@@ -1,0 +1,33 @@
+.home {
+  text-align: center;
+  display: flex;
+  gap: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.big {
+  font-size: 7rem;
+  color: hsl(198, 20%, 13%);
+}
+.btn {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: hsl(198, 20%, 13%);
+  color: hsl(0, 0%, 66%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+}
+.btn:active {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}

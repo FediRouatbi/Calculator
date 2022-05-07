@@ -1,0 +1,46 @@
+.theme {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  width: 100%;
+  font-size: 3rem;
+}
+.themes {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.icon {
+  font-size: 2rem;
+
+  text-transform: uppercase;
+}
+.toogle {
+  font-size: 1.5rem;
+}
+.nums {
+  display: flex;
+  justify-content: space-between;
+}
+.animation {
+  display: inline-block;
+  width: 5rem;
+  background-color: hsl(268, 75%, 9%);
+  height: 2rem;
+  border-radius: 15px;
+  position: relative;
+  padding-left: 1rem;
+}
+.animation::after {
+  content: " ";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,7 @@
+.result {
+  padding: 2rem;
+  background-color: hsl(268, 75%, 9%);
+  width: 100%;
+  border-radius: 8px;
+  text-align: end;
+}

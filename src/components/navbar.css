@@ -1,0 +1,20 @@
+.nav {
+  height: 5rem;
+  background-color: hsl(198, 20%, 13%);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-weight: 600;
+}
+.nav .link {
+  color: #ced4da;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color ease-in 0.2s;
+  
+}
+.nav .link:hover {
+  color: #f1f3f5;
+}
