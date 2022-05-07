@@ -13,6 +13,7 @@ const About = () => {
           className="links_icon"
           target="_blank"
           href="https://github.com/FediRouatbi"
+          rel="noreferrer"
         >
           <FaGithub className="icon" size={40} />
         </a>
@@ -20,6 +21,7 @@ const About = () => {
           className="links_icon"
           target="_blank"
           href="https://www.facebook.com/xCHIVASx/"
+          rel="noreferrer"
         >
           <FaFacebook className="icon" size={40} />
         </a>
