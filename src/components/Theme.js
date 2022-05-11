@@ -1,6 +1,9 @@
 import { FaPalette } from "react-icons/fa";
 import "./theme.css";
+import { useContext } from "react";
+import { KeyboardContext } from "../context/keyboardContext";
 const Theme = () => {
+  const { toogle } = useContext(KeyboardContext);
   return (
     <div className="theme">
       <div className="name">calc</div>
@@ -14,7 +17,9 @@ const Theme = () => {
             <span>2</span>
             <span>3</span>
           </div>
-          <div className="animation"></div>
+          <div className="animation bg">
+            <button onClick={toogle} className="position"></button>
+          </div>
         </div>
       </div>
     </div>

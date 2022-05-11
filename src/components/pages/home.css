@@ -7,8 +7,10 @@
   align-items: center;
 }
 .big {
-  font-size: 7rem;
-  color: hsl(198, 20%, 13%);
+  font-size: clamp(2rem, 7vw, 7rem);
+}
+.small {
+  font-size: clamp(1rem, 4vw, 4rem);
 }
 .btn {
   text-decoration: none;
