@@ -31,7 +31,9 @@ export const KeyboardProvider = ({ children }) => {
 
   const getKey = (key) => {
     if (!screen && (isNaN(key) || key === "0")) return setScreen("");
+      //reset all
     if (key === "RESET") return setScreen("");
+    //delete last key
     if (key === "DEL") return setScreen((prev) => prev.slice(0, -1));
     if (key === "=" && screen !== "")
       return setScreen((prev) => evaluate(prev).toFixed(2).toString());
@@ -43,11 +45,11 @@ export const KeyboardProvider = ({ children }) => {
     });
   };
 
-  //show key pressed
+  
 
-  //reset all
+  
 
-  //delete last key
+
   const toogle = (e) => {
     e.target.classList.remove(`pos${theme}`);
     console.log(theme);
