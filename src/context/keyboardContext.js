@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-
+import { evaluate } from "mathjs";
 export const KeyboardContext = createContext();
 export const KeyboardProvider = ({ children }) => {
   const [screen, setScreen] = useState("");
@@ -34,7 +34,7 @@ export const KeyboardProvider = ({ children }) => {
     if (key === "RESET") return setScreen("");
     if (key === "DEL") return setScreen((prev) => prev.slice(0, -1));
     if (key === "=" && screen !== "")
-      return setScreen((prev) => eval(prev).toString());
+      return setScreen((prev) => evaluate(prev).toFixed(2).toString());
     setScreen((prev) => {
       if (isNaN(prev.slice(-1)) && isNaN(key) && key !== ".")
         return prev.slice(0, -1) + key;
