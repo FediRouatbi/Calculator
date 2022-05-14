@@ -1,18 +1,22 @@
 .about {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: 9rem;
+  gap: 6rem;
   line-height: 2;
+}
+.about p {
+  width: 70%;
+  font-size: clamp(2rem, 5vh, 7rem);
 }
 .links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .links_icon {
   display: flex;

@@ -23,7 +23,6 @@ export const KeyboardProvider = ({ children }) => {
   });
   const calculatorBackground = document.querySelectorAll(".bg");
   calculatorBackground.forEach((el) => {
-    console.log(theme);
     if (theme === 1) el.style.backgroundColor = "hsl(223, 31%, 20%)";
     if (theme === 2) el.style.backgroundColor = "hsl(0, 5%, 81%)";
     if (theme === 3) el.style.backgroundColor = "hsl(268, 75%, 9%)";
@@ -31,24 +30,28 @@ export const KeyboardProvider = ({ children }) => {
 
   const getKey = (key) => {
     if (!screen && (isNaN(key) || key === "0")) return setScreen("");
-      //reset all
+    //reset all
     if (key === "RESET") return setScreen("");
     //delete last key
     if (key === "DEL") return setScreen((prev) => prev.slice(0, -1));
-    if (key === "=" && screen !== "")
-      return setScreen((prev) => evaluate(prev).toFixed(2).toString());
-    setScreen((prev) => {
-      if (isNaN(prev.slice(-1)) && isNaN(key) && key !== ".")
-        return prev.slice(0, -1) + key;
+    //print result
+    if (key === "=")
+      return setScreen((prev) => {
+        if (prev === "") return "";
+        return (
+          Number.isInteger(evaluate(prev))
+            ? evaluate(prev)
+            : evaluate(prev).toFixed(2)
+        ).toString();
+      });
 
-      return prev.concat(key !== "=" ? key : "");
+    setScreen((prev) => {
+      console.log(prev.slice(-1));
+      if (isNaN(prev.slice(-1)) && isNaN(key)) return prev.slice(0, -1) + key;
+
+      return prev.concat(key);
     });
   };
-
-  
-
-  
-
 
   const toogle = (e) => {
     e.target.classList.remove(`pos${theme}`);
